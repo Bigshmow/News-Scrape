@@ -3,6 +3,7 @@ var axios = require("axios");
 var cheerio = require("cheerio");
 
 module.exports = function(app) {
+    
     app.get("/api/articles", function(req, res) {
         db.Article.find({})
           .then(function(dbArticle) {

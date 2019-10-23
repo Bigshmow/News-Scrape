@@ -1,5 +1,5 @@
 // Grab the articles as a json
-$.getJSON("/articles", function(data) {
+$.getJSON("/api/articles", function(data) {
     // For each one
     data.forEach(function(article)  {
       // Display the apropos information on the page

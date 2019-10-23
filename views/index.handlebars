@@ -5,11 +5,11 @@
     </span>
 </nav>
 <div class="container-fluid">
-    <div class="row">
-
-    </div>
+    <div id="test">Testing still</div>
+    {{#each Article}}
+    <p>{{this.title}}<br><a href={{this.link}}>{{this.link}}</a></p><button class='makeNote'>Make a Note</button>
+    {{/each}}
     <div id="articles">Articles</div>
     <div id="notes">Notes</div>
-    <div id="test">Testing</div>
 </div>
 </div>

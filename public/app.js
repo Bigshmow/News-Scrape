@@ -1,11 +1,11 @@
 // Grab the articles as a json
-$.getJSON("/api/articles", function(data) {
-    // For each one
-    data.forEach(function(article)  {
-      // Display the apropos information on the page
-      $("#articles").append("<p data-id='" + article._id + "'>" + article.title + "<br />" + article.link + "</p><button class='makeNote'>Make a Note</button>");
-    })
-  });
+// $.getJSON("/api/articles", function(data) {
+//     // For each one
+//     data.forEach(function(article)  {
+//       // Display the apropos information on the page
+//       $("#articles").append("<p data-id='" + article._id + "'>" + article.title + "<br />" + article.link + "</p><button class='makeNote'>Make a Note</button>");
+//     })
+//   });
 
 
   // Whenever someone clicks a p tag

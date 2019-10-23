@@ -9,7 +9,7 @@ var PORT = process.env.PORT || 3000;
 
 var app = express();
 
-// app.use(logger("dev"));
+app.use(logger("dev"));
 // Parse request body as JSON
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());

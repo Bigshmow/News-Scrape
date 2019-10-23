@@ -4,12 +4,27 @@
         <h1>WoW Scrape!</h1>---Just the WoW from <a href="https://icy-veins.com">Ice-Veins</a>
     </span>
 </nav>
-<div class="container-fluid">
-    <div id="test">Testing still</div>
+<div class="container">
+    <br>
+    <div id="test">Testing still (not visibile at launch) </div>
+    <br>
     {{#each Article}}
-    <p>{{this.title}}<br><a href={{this.link}}>{{this.link}}</a></p><button class='makeNote'>Make a Note</button>
+    <div class="row">
+        <div class="col-10">
+        <div class="card">
+    <p>{{this.title}}<br><a href={{this.link}}>{{this.link}}</a></p>
+    </div>
+    </div>
+    <div class="col-2">
+        <button class='btn-lg btn-info makeNote'>Make a Note</button>
+    </div>
+    </div>
+    <div class="row">
+        <div class="col-12">
+    <div class="notes">Notes (not visibile at launch) </div>
+    </div>
+    </div>
     {{/each}}
     <div id="articles">Articles</div>
-    <div id="notes">Notes</div>
 </div>
 </div>

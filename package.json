@@ -1,9 +1,6 @@
 {
   "name": "news-scrape",
   "version": "1.0.0",
-  "engines": {
-    "node": "10.15.3"
-  },
   "description": "news-scraper",
   "main": "index.js",
   "scripts": {

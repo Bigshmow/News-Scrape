@@ -1,8 +1,9 @@
 <div id="home">
-<nav class="navbar navbar-light bg-dark">
-    <span class="navbar-brand mb-0 h1" id="brand">
-        <h1>WoW Scrape!</h1>---Just the WoW from <a href="https://icy-veins.com">Ice-Veins</a>
+<nav class="navbar navbar-dark bg-dark">
+    <span class="navbar-brand mb-0 h1 text-center" id="brand">
+        <h1>WoW Scrape!</h1>---Just the WoW from <a href="https://icy-veins.com" class="icy" target="_blank">Ice-Veins</a>
     </span>
+    <h1 class="displayNone socialMedia"><a href="https://www.linkedin.com/in/devin-stewart-7697bb9b/" class="fa fa-linkedin"></a> | <a href="https://www.github.com/bigshmow" class="fa fa-github"></a></h1>
 </nav>
 <div class="container">
     <br>
@@ -10,13 +11,13 @@
     <br>
     {{#each Article}}
     <div class="row">
-        <div class="col-10">
+        <div class="col-9">
         <div class="card">
-    <p>{{this.title}}<br><a href={{this.link}}>{{this.link}}</a></p>
-    </div>
-    </div>
-    <div class="col-2">
+    <p>{{this.title}}<br><a href={{this.link}} target="_blank">{{this.link}}</a></p>
+    <div class="col-3">
         <button class='btn-lg btn-info makeNote'>Make a Note</button>
+    </div>
+    </div>
     </div>
     </div>
     <div class="row">

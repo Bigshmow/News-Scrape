@@ -1,9 +1,28 @@
 /* Elements */
+a , a:hover{
+    color: black;
+}
 
 /* End Elements */
 
 /* Classes */
 
+.fa-github:hover , .fa-linkedin:hover {
+    color: rgb(148, 212, 233);
+    text-decoration: none;
+}
+
+.icy {
+    color: rgb(148, 212, 233);
+}
+
+.navbar {
+    border-bottom: 5px solid rgb(148, 212, 233);
+}
+
+.socialMedia {
+    color: rgb(148, 212, 233);
+}
 
 /* End Classes */
 

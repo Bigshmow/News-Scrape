@@ -16,20 +16,22 @@
         </div>
             {{#each Article}}
                 <div class="row">
-        <div class="col-9">
-        <div class="card">
-    <p>{{this.title}}<br><a href={{this.link}} target="_blank">{{this.link}}</a></p>
-    <div class="col-3">
-        <button class='btn-lg btn-info makeNote'>Make a Note</button>
-    </div>
-    </div>
-    </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-    <div class="notes">Notes (not visibile at launch) </div>
-    </div>
-    </div>
+            <div class="col-9">
+                <div class="card">
+                    <p>{{this.title}}<br><a href={{this.link}} target="_blank">{{this.link}}</a></p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <button class='btn-lg btn-info makeNote'>Make a Note</button> <button data-_id={{this._id}} class='btn-lg btn-info unSave'>Unsave this!</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="notes">Notes (not visibile at launch) </div>
+            </div>
+        </div>
             {{/each}}
         
     </div>

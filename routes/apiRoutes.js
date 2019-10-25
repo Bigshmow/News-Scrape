@@ -4,6 +4,7 @@ var cheerio = require("cheerio");
 
 module.exports = function(app) {
 
+    // get all articles on home page with axios
     app.get("/api/articles", function(req, res) {
         db.Article.find({})
           .then(function(dbArticle) {
@@ -13,7 +14,30 @@ module.exports = function(app) {
             res.json(err);
           });
       });
+
+    // update article to saved state
+    app.put("/api/articles/:id", function(req, res) {
+      db.Article.updateOne({ _id: req.params.id }, {saved: true})
+      .then(function(dbArticle) {
+        res.json(dbArticle);
+      })
+      .catch(function(err) {
+        res.json(err);
+      });
+    });
+
+    // update article to unsaved state
+    app.put("/api/unsave/:id", function(req, res) {
+      db.Article.updateOne({ _id: req.params.id }, {saved: false})
+      .then(function(dbArticle) {
+        res.json(dbArticle);
+      })
+      .catch(function(err) {
+        res.json(err);
+      });
+    });
       
+    // scrape new articles from icyveins with axios/cheerio
       app.get("/scrape", function(req, res) {
         axios.get("https://www.icy-veins.com/").then(function(response) {
           var $ = cheerio.load(response.data);
@@ -32,9 +56,7 @@ module.exports = function(app) {
                 console.log(err);
               });
           });
-      
-        //   res.send("Scrape Complete");
-        });
+              });
       });
 
     }

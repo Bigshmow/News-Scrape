@@ -1,35 +1,43 @@
 <div id="home">
     <nav class="navbar navbar-dark bg-dark">
         <span class="navbar-brand mb-0 h1 text-center" id="brand">
-            <h1>WoW Scrape!</h1>---Just the WoW from <a href="https://icy-veins.com" class="icy" style="text-decoration: none"
-                target="_blank">Ice-Veins</a>
+            <h1>WoW Scrape!</h1>---Just the WoW from <a href="https://icy-veins.com" class="icy"
+                style="text-decoration: none" target="_blank">Ice-Veins</a>
         </span>
-        <h1 class="socialMedia"><button class='btn-lg btn-info fresh'><a href="/" style="text-decoration: none">Fresh Scrape</a></button> <button
-                class='btn-lg btn-info makeNote'><a href="/saved" style="text-decoration: none">Saved Articles</a></button> <a
+        <h1 class="socialMedia"><button class='btn-lg btn-info fresh'><a href="/" style="text-decoration: none">Fresh
+                    Scrape</a></button> <button class='btn-lg btn-info makeNote'><a href="/saved"
+                    style="text-decoration: none">Saved Articles</a></button> <a
                 href="https://www.linkedin.com/in/devin-stewart-7697bb9b/" class="fa fa-linkedin"></a> | <a
-                href="https://www.github.com/bigshmow" class="fa fa-github"></a></h1>
+                href="https://github.com/Bigshmow/News-Scrape" class="fa fa-github"></a></h1>
     </nav>
-<div class="container">
-    <br>
-    <div id="test">Testing still (not visibile at launch) </div>
-    <br>
-    {{#each Article}}
-    <div class="row">
-        <div class="col-9">
-        <div class="card">
-    <p>{{this.title}}<br><a href={{this.link}} target="_blank">{{this.link}}</a></p>
-    <div class="col-3">
-        <button class='btn-lg btn-info makeNote'>Make a Note</button>
+    <div class="container">
+        <br>
+        <div class="jumbotron">
+            <div class="row">
+                <h1 class="center">Welcome to WoW Scrape</h1>
+                <h3>Below you'll find the latest world of warcraft specific articles from IcyVeins</h3>
+            </div>
+        </div>
+        <br>
+        {{#each Article}}
+        <div class="row">
+            <div class="col-9">
+                <div class="card">
+                    <p>{{this.title}}<br><a href={{this.link}} target="_blank">{{this.link}}</a></p>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="card">
+                    <button class='btn-lg btn-info makeNote'>Make a Note</button> <button data-_id={{this._id}} class='btn-lg btn-info saveArt'>Save this!</button>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <div class="notes">Notes (not visibile at launch) </div>
+            </div>
+        </div>
+        {{/each}}
+        <div id="articles">Articles</div>
     </div>
-    </div>
-    </div>
-    </div>
-    <div class="row">
-        <div class="col-12">
-    <div class="notes">Notes (not visibile at launch) </div>
-    </div>
-    </div>
-    {{/each}}
-    <div id="articles">Articles</div>
-</div>
 </div>

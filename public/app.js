@@ -2,6 +2,8 @@
 $(document).ready(function() {
 
 $(document).on("click", ".fresh", loadScrape);
+$(document).on("click", ".saveArt", saveArt);
+$(document).on("click", ".unSave", unSave);
 
 
 $(document).on("click", ".makeNote", function() {
@@ -37,12 +39,32 @@ $(document).on("click", ".makeNote", function() {
       });
   });
 
-
+//   This function will scrape and load the main page
   function loadScrape () {
     $.get("/scrape", function(data) {
     });
     window.location("/");
   };
+
+//  This function will save an article
+  function saveArt () {
+    var articleId = $(this).attr("data-_id");
+    console.log(articleId);
+    $.ajax({
+      type: "PUT",
+      url: "/api/articles/" + articleId
+    });
+}
+
+//  This function will unsave an article
+  function unSave () {
+    var articleId = $(this).attr("data-_id");
+    console.log(articleId);
+    $.ajax({
+      type: "PUT",
+      url: "/api/unsave/" + articleId
+    });
+}
 
 // document ready end
 });

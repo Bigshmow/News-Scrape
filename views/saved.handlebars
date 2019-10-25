@@ -1,20 +1,21 @@
-<div id="home">
-    <nav class="navbar navbar-dark bg-dark">
+<div id="saved">
+<nav class="navbar navbar-dark bg-dark">
         <span class="navbar-brand mb-0 h1 text-center" id="brand">
             <h1>WoW Scrape!</h1>---Just the WoW from <a href="https://icy-veins.com" class="icy" style="text-decoration: none"
                 target="_blank">Ice-Veins</a>
         </span>
-        <h1 class="socialMedia"><button class='btn-lg btn-info fresh'><a href="/" style="text-decoration: none">Fresh Scrape</a></button> <button
-                class='btn-lg btn-info makeNote'><a href="/saved" style="text-decoration: none">Saved Articles</a></button> <a
+        <h1 class="socialMedia"><button
+                class='btn-lg btn-info goHome'><a href="/" style="text-decoration: none">Home</a></button> <a
                 href="https://www.linkedin.com/in/devin-stewart-7697bb9b/" class="fa fa-linkedin"></a> | <a
                 href="https://www.github.com/bigshmow" class="fa fa-github"></a></h1>
     </nav>
-<div class="container">
-    <br>
-    <div id="test">Testing still (not visibile at launch) </div>
-    <br>
-    {{#each Article}}
-    <div class="row">
+    <div class="container">
+        <br>
+        <div class="jumbotron">
+            <h1>Here are your saved articles!</h1>
+        </div>
+            {{#each Article}}
+                <div class="row">
         <div class="col-9">
         <div class="card">
     <p>{{this.title}}<br><a href={{this.link}} target="_blank">{{this.link}}</a></p>
@@ -29,7 +30,7 @@
     <div class="notes">Notes (not visibile at launch) </div>
     </div>
     </div>
-    {{/each}}
-    <div id="articles">Articles</div>
-</div>
+            {{/each}}
+        
+    </div>
 </div>

@@ -1,4 +1,9 @@
-  // Whenever someone clicks a p tag
+// document ready
+$(document).ready(function() {
+
+$(document).on("click", ".fresh", loadScrape);
+
+
 $(document).on("click", ".makeNote", function() {
     // Empty the notes from the note section
     $("#notes").empty();
@@ -31,3 +36,13 @@ $(document).on("click", ".makeNote", function() {
         }
       });
   });
+
+
+  function loadScrape () {
+    $.get("/scrape", function(data) {
+    });
+    window.location("/");
+  };
+
+// document ready end
+});

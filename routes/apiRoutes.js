@@ -3,7 +3,7 @@ var axios = require("axios");
 var cheerio = require("cheerio");
 
 module.exports = function(app) {
-    
+
     app.get("/api/articles", function(req, res) {
         db.Article.find({})
           .then(function(dbArticle) {
@@ -13,7 +13,7 @@ module.exports = function(app) {
             res.json(err);
           });
       });
-
+      
       app.get("/scrape", function(req, res) {
         axios.get("https://www.icy-veins.com/").then(function(response) {
           var $ = cheerio.load(response.data);
@@ -33,7 +33,7 @@ module.exports = function(app) {
               });
           });
       
-          res.send("Scrape Complete");
+        //   res.send("Scrape Complete");
         });
       });
 

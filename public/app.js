@@ -42,8 +42,7 @@ $(document).ready(function () {
     // This function will scrape and load the main page
   function loadScrape() {
     $.get("/scrape", function (data) {
-    });
-    alert("Getting your results!",setTimeout(window.location.assign("/"), 1000))
+    }).then(alert("Getting your results!", setTimeout(window.location.reload()),4000))
   };
 
   //  This function will save an article
@@ -54,7 +53,7 @@ $(document).ready(function () {
       type: "PUT",
       url: "/api/articles/" + articleId
     });
-    setTimeout(window.location.assign("/"), 1000);
+    setTimeout(window.location.assign("/"), 2000);
   }
 
   //  This function will unsave an article
@@ -65,7 +64,7 @@ $(document).ready(function () {
       type: "PUT",
       url: "/api/unsave/" + articleId
     });
-    setTimeout(window.location.assign("/saved"), 1000);
+    setTimeout(window.location.assign("/saved"), 2000);
   }
 
   // document ready end

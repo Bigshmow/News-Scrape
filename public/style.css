@@ -7,6 +7,11 @@ a , a:hover{
 
 /* Classes */
 
+.centering {
+    display: flex;
+    align-items: center
+}
+
 .fa-github:hover , .fa-linkedin:hover {
     color: rgb(148, 212, 233);
     text-decoration: none;
@@ -33,3 +38,13 @@ a , a:hover{
 }
 
 /* End IDs */
+
+/* media queries */
+
+@media screen and (max-width: 800px) {
+    .centering {
+        display: inline-block;
+    }
+}
+
+/* end media queries */

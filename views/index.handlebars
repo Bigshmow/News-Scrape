@@ -23,14 +23,15 @@
         <br>
         {{#each Article}}
         <div class="row no-gutters">
+            <div class="centering">
             <div class="col-md-3">
                 <div class="card mb-4">
                     <img src={{this.img}} class="img-responsive">
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="card">
-                    <p class="card-text">{{this.title}}<br>{{this.text}}<a href={{this.link}} class="stretched-link"
+                <div class="card mb-4 border-info">
+                    <p class="card-text text-center">{{this.title}}</p><p>{{this.text}}<a href={{this.link}} class="stretched-link"
                             target="_blank"></a></p>
                 </div>
             </div>
@@ -41,6 +42,7 @@
                     <button class='btn-lg btn-info makeNote'>Make a Note</button> <button data-_id={{this._id}}
                         class='btn-lg btn-info saveArt'>Save this!</button>
                 </div>
+            </div>
             </div>
         </div>
         <div class="row">

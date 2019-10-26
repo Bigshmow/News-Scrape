@@ -43,8 +43,7 @@ $(document).ready(function () {
   function loadScrape() {
     $.get("/scrape", function (data) {
     });
-    // alert("Getting your results!")
-    setTimeout(window.location.assign("/"), 1000);
+    alert("Getting your results!",setTimeout(window.location.assign("/"), 1000))
   };
 
   //  This function will save an article

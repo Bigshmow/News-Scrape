@@ -37,6 +37,10 @@ a , a:hover{
     color: white;
 }
 
+#text-card {
+    overflow: hidden;
+}
+
 /* End IDs */
 
 /* media queries */
@@ -44,6 +48,10 @@ a , a:hover{
 @media screen and (max-width: 800px) {
     .centering {
         display: inline-block;
+    }
+
+    #text-card {
+        overflow: auto;
     }
 }
 

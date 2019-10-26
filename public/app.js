@@ -43,8 +43,8 @@ $(document).ready(function () {
   function loadScrape() {
     $.get("/scrape", function (data) {
     });
-    alert("Getting your results!")
-    setTimeout(window.location.assign("/"), 3000);
+    // alert("Getting your results!")
+    setTimeout(window.location.assign("/"), 1000);
   };
 
   //  This function will save an article
@@ -55,7 +55,7 @@ $(document).ready(function () {
       type: "PUT",
       url: "/api/articles/" + articleId
     });
-    setTimeout(window.location.assign("/"), 3000);
+    setTimeout(window.location.assign("/"), 1000);
   }
 
   //  This function will unsave an article
@@ -66,7 +66,7 @@ $(document).ready(function () {
       type: "PUT",
       url: "/api/unsave/" + articleId
     });
-    setTimeout(window.location.assign("/saved"), 3000);
+    setTimeout(window.location.assign("/saved"), 1000);
   }
 
   // document ready end

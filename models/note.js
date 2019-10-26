@@ -3,8 +3,14 @@ var mongoose = require("mongoose");
 var Schema = mongoose.Schema;
 
 var NoteSchema = new Schema({
-  title: String,
-  body: String
+  title: {
+    type: String,
+    default: " ",
+  },
+  body: {
+    type: String,
+    default: ""
+  }
 });
 
 var Note = mongoose.model("note", NoteSchema);

@@ -42,7 +42,7 @@ $(document).ready(function () {
     // This function will scrape and load the main page
   function loadScrape() {
     $.get("/scrape", function (data) {
-    }).then(alert("Getting your results!", setTimeout(window.location.reload()),2500))
+    }).then(alert("Getting your results!", setTimeout(window.location.reload()),4000))
   };
 
   //  This function will save an article

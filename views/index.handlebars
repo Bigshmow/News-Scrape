@@ -12,23 +12,34 @@
     </nav>
     <div class="container">
         <br>
-        <div class="jumbotron">
             <div class="row">
-                <h1 class="center">Welcome to WoW Scrape</h1>
-                <h3>Below you'll find the latest world of warcraft specific articles from IcyVeins</h3>
-            </div>
+                <div class="col-12">
+                <div class="jumbotron text-center">
+                    <h1 class="">Welcome to WoW Scrape</h1>
+                    <h3>Below you'll find the latest world of warcraft specific articles from IcyVeins</h3>
+                </div>
+                </div>
         </div>
         <br>
         {{#each Article}}
-        <div class="row">
-            <div class="col-9">
-                <div class="card">
-                    <p>{{this.title}}<br><a href={{this.link}} target="_blank">{{this.link}}</a></p>
+        <div class="row no-gutters">
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <img src={{this.img}} class="img-responsive">
                 </div>
             </div>
-            <div class="col-3">
+            <div class="col-md-6">
                 <div class="card">
-                    <button class='btn-lg btn-info makeNote'>Make a Note</button> <button data-_id={{this._id}} class='btn-lg btn-info saveArt'>Save this!</button>
+                    <p class="card-text">{{this.title}}<br>{{this.text}}<a href={{this.link}} class="stretched-link"
+                            target="_blank"></a></p>
+                </div>
+            </div>
+
+
+            <div class="col-md-3">
+                <div class="card mb-4">
+                    <button class='btn-lg btn-info makeNote'>Make a Note</button> <button data-_id={{this._id}}
+                        class='btn-lg btn-info saveArt'>Save this!</button>
                 </div>
             </div>
         </div>

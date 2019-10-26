@@ -13,6 +13,15 @@ var ArticleSchema = new Schema({
     // unique: true,
     required: true
   },
+  img: {
+    type: String,
+    unique: true,
+    required: true
+  },
+  text: {
+    type: String,
+    unique: true
+  },
   saved:{
     type: Boolean,
     default: false

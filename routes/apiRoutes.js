@@ -47,6 +47,8 @@ module.exports = function(app) {
       
             result.title = $(this).children(".text_container").find("a").children(".news_title").text();
             result.link = $(this).find("a").attr("href");
+            result.img = $(this).find("img").attr("src");
+            result.text = $(this).children(".text_container").children(".news_subtitle_container").children(".news_subtitle").text().substring(0,175) + "...";
       
             db.Article.create(result)
               .then(function(dbArticle) {

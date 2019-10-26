@@ -39,10 +39,8 @@
 
                 <div class="col-md-3">
                     <div class="card mb-4">
-
-                        {{!-- modal test --}}
                         <button type="button" data-_id={{this._id}} class='btn-lg btn-info readNote' style="height: 62.5px" data-toggle="modal"
-                            data-target="#exampleModal">
+                            data-target="#exampleModal" data-whatever={{this._id}}>
                             Make a note
                         </button>
                         <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
@@ -59,23 +57,18 @@
                                         <form>
                                             <h5>Leave a note below:</h5>
                                             <hr>
-                                            <textarea class="form-control" id="textModal">
+                                            <textarea class="form-control" id="recipient-name">
                                                 
                                             </textarea>
                                         </form>
                                     </div>
                                     <div class="modal-footer">
-                                        <button type="button" data-_id={{this._id}} class="btn btn-primary saveNote">Save changes</button>
+                                        <button type="button" data-_id={{this._id}} class="btn btn-primary saveNote" id="recipient-name">Save changes</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        {{!-- modal test --}}
-{{!-- 
-                        <button data-_id={{this._id}} class='btn-lg btn-info makeNote' style="height: 62.5px">Make a
-                            Note</button>
-                              --}}
-                            <button data-_id={{this._id}} class='btn-lg btn-info saveArt'
+                            <button type="button" data-_id={{this._id}} class='btn-lg btn-info saveArt'
                             style="height: 62.5px">Save this!</button>
                     </div>
                 </div>

@@ -34,8 +34,13 @@ $(document).ready(function () {
     $.ajax({
       method: "POST",
       url: "/articles/" + articleId,
+      dataType: "json",
       data: {
+        _id: articleId,
         body: newNote
+      },
+      success: function(data) {
+        $("#textModal").val(" ");
       }
     });
     setTimeout(window.location.assign("/"), 2000);

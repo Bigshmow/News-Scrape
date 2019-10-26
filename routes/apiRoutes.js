@@ -76,11 +76,11 @@ module.exports = function (app) {
       .then(function (dbNote) {
         console.log("dbnote is: ",dbNote);
         return db.Article.findOneAndUpdate({
-          _id: req.params.id
-        }, {
-          note: dbNote,
-        }, {
-          new: true
+          _id: dbNote._id
+        }, { $set: {
+          note: dbNote._id,
+          body: dbNote.body
+      }
         });
       })
       .then(function (dbArticle) {

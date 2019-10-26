@@ -4,12 +4,10 @@ var Schema = mongoose.Schema;
 
 var NoteSchema = new Schema({
   title: {
-    type: String,
-    default: " ",
+    type: String
   },
   body: {
-    type: String,
-    default: ""
+    type: String
   }
 });
 

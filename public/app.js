@@ -4,11 +4,12 @@ $(document).ready(function () {
   $(document).on("click", ".fresh", loadScrape);
   $(document).on("click", ".saveArt", saveArt);
   $(document).on("click", ".unSave", unSave);
-  $(document).on("click", ".makeNote", makeNote);
+  $(document).on("click", ".readNote", readNote);
+  $(document).on("click", ".saveNote", saveNote);
 
-  function makeNote() {
+  function readNote() {
 
-    $("#textModal").val("");
+    $("#textModal").empty();
     $("#titleModal").empty();
 
     // Save the id from the p tag
@@ -21,13 +22,24 @@ $(document).ready(function () {
       })
       .then(function (data) {
         console.log(data);
-        // The title of the article
         $("#titleModal").append(data.title);
-        if (data.note) {
-          $("#textModal").val(data.note.body);
-        }
+        $("#textModal").append(data.note.body);
       });
   };
+
+  function saveNote() {
+    var articleId = $(this).attr("data-_id");
+    var newNote = $("#textModal").val();
+
+    $.ajax({
+      method: "POST",
+      url: "/articles/" + articleId,
+      data: {
+        body: newNote
+      }
+    });
+    setTimeout(window.location.assign("/"), 2000);
+  }
 
   // This function will scrape and load the main page
   function loadScrape() {

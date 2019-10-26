@@ -11,19 +11,24 @@
     </nav>
     <div class="container">
         <br>
-        <div class="jumbotron">
-            <h1>Here are your saved articles!</h1>
+        <div class="row">
+                <div class="col-12">
+                <div class="jumbotron text-center">
+                    <h1 class="">These are your saved articles</h1>
+                </div>
+                </div>
         </div>
         {{#each Article}}
         <div class="row no-gutters">
-            <div class="col-3">
+            <div class="centering">
+            <div class="col-md-3">
                 <div class="card mb-4">
-                    <img src={{this.img}} class="card-img-top">
+                    <img src={{this.img}} class="img-responsive">
                 </div>
             </div>
-            <div class="col-6">
-                <div class="card mb-4">
-                    <p class="card-text">{{this.title}}<br>{{this.text}}<a href={{this.link}} class="stretched-link"
+            <div class="col-md-6">
+                <div class="card mb-4 border-info">
+                    <p class="card-text text-center">{{this.title}}</p><p>{{this.text}}<a href={{this.link}} class="stretched-link"
                             target="_blank"></a></p>
                 </div>
             </div>
@@ -33,10 +38,11 @@
                         class='btn-lg btn-info unSave'>Unsave this!</button>
                 </div>
             </div>
+            </div>
         </div>
         <div class="row">
             <div class="col-12">
-                <div class="notes">Notes (not visibile at launch) </div>
+                <div class="notes"></div>
             </div>
         </div>
         {{/each}}
